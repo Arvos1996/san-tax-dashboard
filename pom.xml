@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.3</version>
+		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>de.san-tax</groupId>
+	<artifactId>dashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>dashboard</name>
+	<description>San-Tax Dashboard</description>
 	<properties>
 		<java.version>15</java.version>
-		<app.image.name>springboot-react-fullstack</app.image.name>
+		<app.image.name>san-tax-dashboard</app.image.name>
 		<app.image.tag/>
 	</properties>
 	<dependencies>
@@ -34,21 +34,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
+			<version>2.4.3</version>
 		</dependency>
 	</dependencies>
 
@@ -57,6 +55,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.4.4</version>
 				<configuration>
 					<excludes>
 						<exclude>
@@ -80,6 +79,15 @@
 						</ports>
 						<format>OCI</format>
 					</container>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>15</source>
+					<target>15</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -109,11 +117,11 @@
 						</configuration>
 						<executions>
 							<execution>
-								<id>push-custom-tag</id>
+								<id>push-costum-tag</id>
 								<phase>package</phase>
 								<configuration>
 									<to>
-										<image>docker.io/amigoscode/${app.image.name}:${app.image.tag}</image>
+										<image>docker.io/arvos1337/${app.image.name}:${app.image.tag}</image>
 									</to>
 								</configuration>
 								<goals>
@@ -125,7 +133,7 @@
 								<phase>package</phase>
 								<configuration>
 									<to>
-										<image>docker.io/amigoscode/${app.image.name}:latest</image>
+										<image>docker.io/arvos1337/${app.image.name}:latest</image>
 									</to>
 								</configuration>
 								<goals>
@@ -161,11 +169,11 @@
 						</configuration>
 						<executions>
 							<execution>
-								<id>push-custom-tag</id>
+								<id>push-costum-tag</id>
 								<phase>package</phase>
 								<configuration>
 									<to>
-										<image>amigoscode/${app.image.name}:${app.image.tag}</image>
+										<image>arvos1337/${app.image.name}:${app.image.tag}</image>
 									</to>
 								</configuration>
 								<goals>
@@ -177,7 +185,7 @@
 								<phase>package</phase>
 								<configuration>
 									<to>
-										<image>amigoscode/${app.image.name}:latest</image>
+										<image>arvos1337/${app.image.name}:latest</image>
 									</to>
 								</configuration>
 								<goals>
@@ -200,7 +208,7 @@
 						<groupId>com.github.eirslett</groupId>
 						<artifactId>frontend-maven-plugin</artifactId>
 						<!-- Use the latest released version:
-                        https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
+                                  https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
 						<version>1.11.2</version>
 						<configuration>
 							<nodeVersion>v4.6.0</nodeVersion>
@@ -262,4 +270,5 @@
 			</build>
 		</profile>
 	</profiles>
+
 </project>
