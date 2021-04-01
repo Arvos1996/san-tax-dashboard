@@ -223,7 +223,7 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>By Arvos
             <Divider>
-                <a target="_blank" href="https://github.com/Arvos1996/san-tax-dashboard"> Click here for GitHub-Repo</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Arvos1996/san-tax-dashboard"> Click here for GitHub-Repo</a>
             </Divider>
             </Footer>
         </Layout>
