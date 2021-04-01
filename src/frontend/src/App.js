@@ -11,7 +11,7 @@ import {
     Badge,
     Tag,
     Avatar,
-    Radio, Popconfirm
+    Radio, Popconfirm, Divider
 } from 'antd';
 
 import {
@@ -221,7 +221,11 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{textAlign: 'center'}}>By Arvos</Footer>
+            <Footer style={{textAlign: 'center'}}>By Arvos
+            <Divider>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Arvos1996/san-tax-dashboard"> Click here for GitHub-Repo</a>
+            </Divider>
+            </Footer>
         </Layout>
     </Layout>
 }
