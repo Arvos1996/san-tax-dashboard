@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   backend:
-    image: "arvos1337/san-tax-dashboard:1.4.2021.18.11.46"
+    image: "arvos1337/san-tax-dashboard:1.4.2021.18.51.37"
     ports:
       - "80:8080"
     restart: "always"
