@@ -28,3 +28,22 @@ export const deleteStudent = studentId =>
     fetch(`api/v1/students/${studentId}`, {
         method: 'DELETE'
     }).then(checkStatus);
+
+export const getAllTeachers = () =>
+    fetch("api/v1/teachers")
+        .then(checkStatus);
+
+export const addNewTeacher = teacher =>
+    fetch("api/v1/teachers", {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify(teacher)
+        }
+    ).then(checkStatus)
+
+export const deleteTeacher = teacherId =>
+    fetch(`api/v1/teachers/${teacherId}`, {
+        method: 'DELETE'
+    }).then(checkStatus)
