@@ -1,45 +1,51 @@
-package de.santax.dashboard.student;
+package de.santax.dashboard.teacher;
 
+import de.santax.dashboard.student.Gender;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@ToString
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
-@NoArgsConstructor
-@AllArgsConstructor
+@ToString
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name="teacher")
+public class Teacher {
+
     @Id
     @SequenceGenerator(
-            name = "student_sequence",
-            sequenceName = "student_sequence",
+            name = "teacher_sequence",
+            sequenceName = "teacher_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
-            generator = "student_sequence",
+            generator = "teacher_sequence",
             strategy = GenerationType.SEQUENCE)
     private Long id;
     @NotBlank
-    @Column(nullable = false)
     private String name;
-    @Email
+    @NotBlank
     @Column(nullable = false, unique = true)
     private String email;
-    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    @NotNull
     private Gender gender;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    @NotNull
+    private Subject subject;
 
-    public Student(String name, String email, Gender gender) {
+    public Teacher(String name,String email, Gender gender, Subject subject) {
         this.name = name;
         this.email = email;
         this.gender = gender;
+        this.subject = subject;
     }
 }
