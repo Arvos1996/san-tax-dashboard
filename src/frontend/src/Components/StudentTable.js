@@ -1,4 +1,4 @@
-import {Avatar, Badge, Breadcrumb, Button, Divider, Empty, Layout, Popconfirm, Radio, Spin, Table, Tag} from "antd";
+import {Avatar, Badge, Breadcrumb, Button, Empty, Layout, Popconfirm, Radio, Spin, Table, Tag} from "antd";
 import {LoadingOutlined, PlusOutlined, UserOutlined} from "@ant-design/icons";
 import {deleteStudent, getAllStudents} from "../client";
 import {errorNotification, successNotification} from "./Notification";

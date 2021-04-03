@@ -1,10 +1,10 @@
-import {Avatar, Badge, Breadcrumb, Button, Divider, Empty, Layout, Popconfirm, Radio, Spin, Table, Tag} from "antd";
+import {Avatar, Badge, Breadcrumb, Button, Empty, Layout, Popconfirm, Radio, Spin, Table, Tag} from "antd";
 import {LoadingOutlined, PlusOutlined, UserOutlined} from "@ant-design/icons";
 import {deleteTeacher, getAllTeachers} from "../client";
 import {errorNotification, successNotification} from "./Notification";
 import TeacherDrawerForm from "./TeacherDrawerForm";
 import {useState, useEffect} from 'react';
-import {Content, Footer, Header} from "antd/es/layout/layout";
+import {Content, Header} from "antd/es/layout/layout";
 import {NewFooter} from "./NewFooter";
 
 
