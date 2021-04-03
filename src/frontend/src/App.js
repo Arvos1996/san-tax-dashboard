@@ -1,13 +1,13 @@
 import {useState} from 'react'
-import {Layout, Menu, Breadcrumb, Divider } from 'antd';
+import {Layout, Menu } from 'antd';
 import {DesktopOutlined, PieChartOutlined,} from '@ant-design/icons';
 import StudentTable from "./Components/StudentTable";
 import TeacherTable from "./Components/TeacherTable";
-import {BrowserRouter as Router , Route , Switch, Link} from 'react-router-dom';
+import { Route , Switch, Link} from 'react-router-dom';
 
 import './App.css';
 
-const {Header, Content, Footer, Sider} = Layout;
+const { Sider } = Layout;
 
 function App() {
     const [collapsed, setCollapsed] = useState(false);
