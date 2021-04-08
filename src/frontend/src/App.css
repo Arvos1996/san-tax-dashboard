@@ -53,3 +53,8 @@
     transform: rotate(360deg);
   }
 }
+
+.site-statistic-demo-card {
+  padding: 30px;
+  background: #ececec;
+}
