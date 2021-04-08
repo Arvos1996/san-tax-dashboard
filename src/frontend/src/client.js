@@ -48,6 +48,11 @@ export const getAllTeachers = () =>
     fetch("api/v1/teachers")
         .then(checkStatus);
 
+export const getTeacherById = (teacherId) =>
+    fetch(`api/v1/teachers/${teacherId}`, {
+        method: 'GET'
+    }).then(checkStatus)
+
 export const addNewTeacher = teacher =>
     fetch("api/v1/teachers", {
         headers: {
@@ -62,3 +67,12 @@ export const deleteTeacher = teacherId =>
     fetch(`api/v1/teachers/${teacherId}`, {
         method: 'DELETE'
     }).then(checkStatus)
+
+export const updateTeacher = teacher =>
+    fetch("api/v1/teachers", {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        method: 'PUT',
+        body: JSON.stringify(teacher)
+    }).then(checkStatus);

@@ -6,6 +6,7 @@ import TeacherDrawerForm from "./TeacherDrawerForm";
 import {useState, useEffect} from 'react';
 import {Content, Header} from "antd/es/layout/layout";
 import {NewFooter} from "./NewFooter";
+import UpdateTeacherModal from "./ModalUpdateTeacher";
 
 
 
@@ -84,7 +85,7 @@ const columns = fetchTeachers => [
                     cancelText='No'>
                     <Radio.Button value="small">Delete</Radio.Button>
                 </Popconfirm>
-                <Radio.Button value="small">Edit</Radio.Button>
+                <UpdateTeacherModal dataParentToChild = {teacher} fetchTeachers={fetchTeachers} />
             </Radio.Group>
     }
 ];
