@@ -18,6 +18,11 @@ public class TeacherController {
         return teacherService.getAllTeacher();
     }
 
+    @GetMapping(path = "{teacherId}")
+    public Teacher getTeacherById(@PathVariable("teacherId") Long id ) {
+        return teacherService.getTeacherById(id);
+    }
+
     @PostMapping
     public void addTeacher(@Valid @RequestBody Teacher teacher) {
         teacherService.addTeacher(teacher);
@@ -26,5 +31,10 @@ public class TeacherController {
     @DeleteMapping(path = "{teacherId}")
     public void deleteTeacher(@PathVariable("teacherId") Long teacherId) {
         teacherService.deleteTeacher(teacherId);
+    }
+
+    @PutMapping
+    public void updateTeacher(@Valid @RequestBody Teacher teacher) {
+        teacherService.updateTeacher(teacher);
     }
 }
