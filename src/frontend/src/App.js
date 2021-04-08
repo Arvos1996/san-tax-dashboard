@@ -33,7 +33,6 @@ function App() {
                 <StudentTable/>
             </Route>
         </Switch>
-
     </Layout>
 }
 
