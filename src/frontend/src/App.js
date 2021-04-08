@@ -6,6 +6,7 @@ import TeacherTable from "./Components/TeacherTable";
 import { Route , Switch, Link} from 'react-router-dom';
 
 import './App.css';
+import DashboardHome from "./Components/DashboardHome";
 
 const { Sider } = Layout;
 
@@ -28,6 +29,9 @@ function App() {
         <Switch>
             <Route path="/teacher">
                 <TeacherTable/>
+            </Route>
+            <Route exact path="/">
+                <DashboardHome/>
             </Route>
             <Route path="/students">
                 <StudentTable/>
