@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://user-images.githubusercontent.com/74721806/115733583-4f3a4d00-a389-11eb-89e2-cdd916dc1583.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/74721806/115733583-4f3a4d00-a389-11eb-89e2-cdd916dc1583.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">San-Tax Dashboard</h3>
